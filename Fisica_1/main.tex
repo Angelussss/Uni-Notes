@@ -1,0 +1,246 @@
+\documentclass{book}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\begin{Huge}
+\title{Fisica 1}    
+\end{Huge}
+
+\author{Angelo Perotti}
+
+\begin{document}
+\maketitle
+\chapter{Cinematica}
+Cinematica: descrizione del moto del punto materiale
+Punto materiale: descrizione di un oggetto come un singolo punto
+Traiettoria: inzieme di punti di spazio attraverso al quale passa il punto materiale
+
+\subsection{Traiettoria Rettilinea}
+ Legge Oraria \space $x=x(t)$
+\subsubsection{velocita'}
+\begin{itemize}
+    \item Media: $v_m=\dfrac{\Delta x}{\Delta t}$
+    \item Istantanea: $v=\dfrac{dx}{dt}$
+        [LT$^{-1}$]
+\end{itemize}
+\subsubsection{accelerazione}
+\begin{itemize}
+    \item Media: $a_m=\dfrac{\Delta v}{\Delta t}$
+    \item Istantanea: $a_{ist}=\dfrac{dv}{dt}=\dfrac{d^2x}{dt^2}$
+\end{itemize}
+\subsection{moto}
+\subsubsection{rettilineo uniforme}
+\begin{itemize}
+    \item $v$ e' costante
+    \item $x(t)=x_0+v(t-t_0)$
+    \item $x_0=x(t_0)$
+\end{itemize}
+\subsubsection{uniformemente accelerato}
+\begin{itemize}
+    \item $a$ e' costante
+    \item $v(t)=v_0+a(t-t_0)$
+    \item $x(t)=x_0+v_0(t-t_0)+\dfrac{a}{2}(t-t_0)^2$
+    \item $v_0=v(t_0)$
+    \item $x_0=x(t_0)$
+\end{itemize}
+\subsubsection{gravitazionale}
+un corpo in moto vicino ad una superficie con massa elevatissima (ex terra, luna, ...)
+$a=a_{gravitazionale}$
+\subsubsection{periodico}
+dopo periodo $T$ si ripetono identici
+$x(t)=A\sin(\omega t+ \phi)$ 
+MAS: Moto Armonico Semplice
+Ampiezza oscillazione: [A]=[X]=[L]
+$\omega t + \phi$=fase->[$\omega$]=[T$^{-1}$]
+$\phi$->fase iniziale
+se t=0 => $x(t=0)=A \sin (\phi)$
+$\omega=\dfrac{2\pi}{T}$->pulsazione o frequenza angolare (rad/s)
+
+\subsubsection{Balistico}
+Moto del proiettile \newline
+puo' essere descritto in due sole dimensioni
+$$\overline{r}(t)=x(t)\hat{i}+y(t)\hat{j}$$
+x:moto rettilineo uniforme \newline
+y:moto uniformemente accelerato323w
+\section{grandezza fisica}
+per grandezza fisica si intende la proprieta' di un corpo di essere misurata
+$$G=g[U_g]$$
+$g \in \mathbb{R}:$
+\begin{itemize}
+    \item scalare
+    \item vettoriale
+    \item tensore
+\end{itemize}
+\subsection{scalare}
+la grandezza fisica e' scalare quando e' identificata da un unico e solo numero
+ex: unita' di misura; temperatura
+\subsection{vettoriale}
+la grandezza fisica e' vettoriale quando e' identificata da:
+\begin{itemize}
+    \item modulo o intensita'
+    \item direzione
+    \item verso
+\end{itemize}
+\subsubsection{ripasso algebra vettoriale}
+Definisco un vettore: modulo, direzione e verso \newline
+$\overline{v}=\overline{a} \xrightarrow{}$  vettori equipollenti \newline
+vettori equipollenti: vettori con stesso modulo, direzione e verso \newline
+\textit{somma tra vettori}:
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [->, >=Stealth] (13.75,22.5) -- (16.25,25);
+\draw [->, >=Stealth] (17.5,25) -- (20,23.75);
+\draw [->, >=Stealth] (21.25,22.5) -- (23.75,25);
+\draw [->, >=Stealth] (23.75,25) -- (26.25,23.75);
+\draw [ color={rgb,255:red,224; green,27; blue,36}, ->, >=Stealth] (21.25,22.5) -- (26.25,23.75);
+\node [font=\LARGE, color={rgb,255:red,224; green,27; blue,36}] at (14.5,24.5) {$\overline{a}$};
+\node [font=\LARGE, color={rgb,255:red,224; green,27; blue,36}] at (19,25) {$\overline{b}$};
+\node [font=\LARGE, color={rgb,255:red,224; green,27; blue,36}] at (22,24) {$\overline{a}$};
+\node [font=\LARGE, color={rgb,255:red,224; green,27; blue,36}] at (25,25) {$\overline{b}$};
+\node [font=\LARGE, color={rgb,255:red,224; green,27; blue,36}] at (24,22.8) {$\overline{c}$};
+\draw [short] (16.75,24) -- (16.75,23.5);
+\draw [short] (16.5,23.75) -- (17,23.75);
+\draw [short] (21,23.75) -- (21.25,23.75);
+\draw [short] (21,24) -- (21.25,24);
+\end{circuitikz}
+}
+
+\label{fig:my_label}
+\end{figure}
+
+proprieta':
+\begin{itemize}
+    \item commutativa: $\overline{a}+\overline{b}=\overline{b}+\overline{a}$
+    \item associativa: $(\overline{a}+\overline{b})+\overline{c}=\overline{a}+(\overline{b}+\overline{c})$
+    \item $\exists$ elemento neutro 0 $\xrightarrow{}$0+$\overline{a}=\overline{a}$
+    \begin{itemize}
+        \item |0|=0
+        \item direzione e verso non specifici 
+    \end{itemize}
+    \item elemento inverso 
+    \begin{itemize}
+        \item $\overline{a}+\overline{a}^I=0$
+        \item $|\overline{a}^I|=\overline{a}$\
+        \item direzione $\overline{a}^I = $ direzione $\overline{a}$
+        \item verso $\overline{a}^I \neq $ verso $\overline{a}$
+    \end{itemize}
+    \item teorema dei coseni
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw [short] (12.5,20) -- (15,23.75);
+    \draw [short] (15,23.75) -- (20,23.75);
+    \draw [short] (12.5,20) -- (20,23.75);
+    \draw [short] (13.25,21) -- (13.5,20.5);
+    \draw [short] (14.75,23.25) -- (15.5,23.75);
+    \draw [short] (18.75,23.75) -- (19,23.25);
+    \node [font=\LARGE] at (13.7,21) {$\beta$};
+    \node [font=\LARGE] at (15.2,23) {$\gamma$};
+    \node [font=\LARGE] at (18.5,23.5) {$\alpha$};
+    \node [font=\LARGE] at (16.1,21.55) {$\overline{c}$};
+    \node [font=\LARGE] at (17,24.1) {$\overline{b}$};
+    \node [font=\LARGE] at (13.5,22.5) {$\overline{a}$};
+    \end{circuitikz}
+    }%
+    \label{fig:my_label}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \vspace{-0.5cm}
+    \begin{align*}
+        \overline{c} &= \overline{b} + \overline{a}\\
+        |\overline{c}|^2 &= |\overline{a}|^2 + |\overline{b}|^2 - 2|\overline{a}||\overline{b}|\cos\gamma
+    \end{align*}
+\end{minipage}
+\end{figure}
+
+\end{itemize}
+\textit{differenza tra vettori}
+
+    $\overline{c}=\overline{a}-\overline{b}$ \newline
+    $\overline{c}= \overline{a}+(-\overline{b})$ \newline
+    proprieta':
+\begin{itemize}
+    \item $\overline{a}-\overline{b}\neq\overline{b}-\overline{a}$
+\end{itemize}
+
+\textit{prodotto tra vettori} \newline
+    $\overline{a}$ vettore \newline
+    $\alpha$ scalare \newline
+    $\overline{c}= \alpha \cdot \overline{a}$
+    proprieta':
+    \begin{itemize}
+        \item ...
+        \item associativa
+        \item distributiva
+        \item $\alpha=0$
+    \end{itemize}
+
+    \textit{versore}
+    vettore che da informazioni sul verso e sulla direzione
+
+    \textit{prodotto tra vettori}
+    \textit{prodotto scalare}
+    proprieta':
+    \begin{itemize}
+        \item commutativa
+        \item distributiva
+        \item a.a=a2
+    \end{itemize}
+        
+\subsection{passaggio di grandezze da scalari a vettoriali}    
+
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [->, >=Stealth] (15,20) -- (15,23.75);
+\draw [->, >=Stealth] (15,20) -- (18.75,20);
+\draw [->, >=Stealth] (15,20) -- (12.5,18.75);
+\draw [ color={rgb,255:red,224; green,27; blue,36}, line width=1.2pt, ->, >=Stealth] (15,20) -- (14,19.5);
+\draw [ color={rgb,255:red,51; green,209; blue,122}, line width=1.2pt, ->, >=Stealth] (15,20) -- (16.25,20);
+\draw [ color={rgb,255:red,246; green,211; blue,45}, line width=1.2pt, ->, >=Stealth] (15,20) -- (15,21.25);
+\begin{scope}[rotate around={-10.25:(15.5,21.75)}]
+\draw[domain=15.5:18.25,samples=100,smooth color={rgb,255:red,165; green,29; blue,45}, ] plot (\x,{1*sin(1*\x r -15.5 r ) +21.75});
+\end{scope}
+\node [font=\large] at (12.5,18.5) {X};
+\node [font=\large] at (18.5,19.5) {Y};
+\draw [ color={rgb,255:red,145; green,65; blue,172}, ->, >=Stealth] (15,20) -- (16.5,22.25);
+\draw [ color={rgb,255:red,145; green,65; blue,172}, short] (15,20) -- (16.25,21);
+\draw [ color={rgb,255:red,145; green,65; blue,172}, ->, >=Stealth] (16.5,21.25) -- (17.5,22);
+\node [font=\large, color={rgb,255:red,145; green,65; blue,172}] at (16.6,21) {$\overline{r}(t)$};
+\node [font=\large, color={rgb,255:red,224; green,27; blue,36}] at (14,20) {$\hat{i}$};
+\node [font=\large, color={rgb,255:red,51; green,209; blue,122}] at (16,19.5) {$\hat{j}$};
+\node [font=\large, color={rgb,255:red,246; green,211; blue,45}] at (14.5,21.5) {$\hat{k}$};
+\node [font=\large, color={rgb,255:red,145; green,65; blue,172}] at (19,22) {$\overline{r}(t+\Delta t)$};
+\node [font=\large, color={rgb,255:red,145; green,65; blue,172}] at (18.5,22.5) {$P(t+\Delta t)$};
+\node [font=\large] at (16.47,22.5) {\textbf{P.}};
+\node [font=\large] at (15,24) {Z};
+\node [font=\large] at (14.69,20.2) {O};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\end{document}
