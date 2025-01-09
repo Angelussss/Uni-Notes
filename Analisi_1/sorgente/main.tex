@@ -1,0 +1,191 @@
+\documentclass{book}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm}
+\usepackage[margin=3cm]{geometry} % Tutti i margini a 2 cm
+\usepackage{dsfont}
+% Definiamo uno "stile" di teorema personalizzato:
+\newtheoremstyle{mystyle}% Nome dello stile
+  {}        % Spazio sopra
+  {}        % Spazio sotto
+  {}        % Font del corpo
+  {}        % Indent
+  {\bfseries} % Font dell'intestazione (titolo)
+  {}        % Punteggiatura dopo il titolo
+  {\newline}% Spazio dopo il titolo
+  {%
+    % #1 = nome ambiente
+    % #2 = numero (se presente)
+    % #3 = note (argomento opzionale fra [])
+    % #4 = separatore
+    \thmnote{#3.}\quad
+  }
+
+% Applichiamo lo stile a un ambiente SENZA numero.
+% Il secondo argomento "" fa sì che non compaia "Definizione" o altro prefisso.
+\theoremstyle{mystyle}
+\newtheorem*{mydefinition}{}
+
+
+\title{Analisi I}
+\author{angeloperotti7 }
+\date{January 2025}
+
+\begin{document}
+
+\maketitle
+\newpage
+\section{Introduction}
+
+\section{Nozioni Preliminari}
+
+\subsection{Insiemi}
+
+\subsubsection{insieme matematico}
+\begin{mydefinition}[Insieme matematico]
+Un \emph{insieme matematico} è una collezione di oggetti
+(o elementi) ben definiti, considerati nel loro insieme
+come un’entità unica. \newline es:
+\[
+   \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}
+\]
+\[
+   \{a, b, c, d, e, f, g, h\}
+\]
+\newline
+classificazione:
+\begin{itemize}
+    \item per \emph{elencazione}
+        \begin{itemize}
+            \item L'ordine degli elementi non e' importante
+            \item $\in$ = appartiene, $\notin$ = non appartiene
+            \item ":=" = e' definito, "$ \{ \} $" = definiscono un insieme
+        \end{itemize}
+    \item per \emph{proprieta' che li accomuna}
+\end{itemize}
+\end{mydefinition}
+\newline
+\subsubsection{operazioni fondamentali tra insiemi}
+\begin{itemize}
+    \item \textbf{unione} $$ A\cup B := \{ x:x \in A \; o \; x \in B \}$$
+    "A unito B" e i suoi elementi sono dati dagli elementi di A con gli elementi di B
+    \item \textbf{intersezione}$$ A\cap B := \{ x:x \in A \; e \; x \in B \}$$
+    "A intersecato B" e i suoi elementi sono dati dagli elementi comuni di A e B
+    \item \textbf{differenza insiemistica}$$ A/B := \{ x:x \in A \; e \; x \notin B \}$$
+    "A meno B" e i suoi elementi sono gli elementi di A che non sono in B
+\end{itemize}
+
+$\hookrightarrow$ affinche' le ultime due operazioni abbiano senso introduciamo l'insieme vuoto: $\emptyset$ 
+
+\subsection{ I numeri reali}
+\begin{mydefinition}[insiemi numerici] 
+insieme:
+\newline
+    \begin{itemize}
+        \item  dei \emph{numeri naturali} $\mathds{N}=\{ 0,1,2,3,4... \}$
+        \item  dei \emph{numeri interi} $\mathds{Z}=\{ 0,1,-1,2,-2... \}$
+        \begin{itemize}
+            \item insieme simmetrico
+            \item e' chiuso rispetto la sottrazione
+        \end{itemize}
+        \item  dei \emph{numeri naturali} $\mathds{Q}= \bigl \{ \dfrac{p}{q}:p,q\in \mathds{Z} \hspace{3mm} q\neq 0 \bigr \}$
+        \begin{itemize}
+            \item  chiuso rispetto le operazioni elementari
+        \end{itemize}
+        
+    \end{itemize}
+\end{mydefinition}
+
+\begin{mydefinition}[Teorema $\sqrt{2}$]
+    non esiste alcun numero razionale   $x \in \mathds{Q}$ t.c. $x^2=2$
+    \newline
+    \emph{Dimostrazione}: \newline
+    non ho voglia di farla ora :D
+    \emph{Osservazione}: 
+    \newline
+    Dal teeorema deduciamo che per esempio $\sqrt{2} \in \mathds{Q}$ quindi i numeri razionali NON bastano a contenere tutte le espressioni numeriche
+\end{mydefinition}
+
+\begin{mydefinition}[Rappresentazione decimale]
+ogni numero razionale $x \in \mathds{Q}$ si puo' scrivere con un allineamento decimale limitato o periodico
+$$  x=\pm p \; \alpha_1 \; \alpha_2 \; \alpha_3 \; \alpha_4... \;\alpha_n... \hspace{3mm} con \hspace{3mm} p \in \mathds{N} \;e \;\alpha_i \in {0,1,2,3,4...}
+$$
+  
+\end{mydefinition}
+
+\begin{mydefinition}[i numeri reali]
+    Definiamo l'insieme $\mathds{R}$ dei numeri reali come l'insieme di tutti i possibili allineamenti decimali
+    $$\mathds{N}\subset\mathds{Z}\subset\mathds{Q}\subset\mathds{R}$$
+\end{mydefinition}
+
+ \begin{mydefinition}[intervalli]
+     dati due numeri reali a,b $\in\mathbf{R}$ con a<b, si pone: \newline
+     \textit{intervalli limitati}
+     \begin{itemize} 
+         \item (a,b) \hspace{3cm} intervallo \emph{aperto}
+         \item $[$a,b$]$ \hspace{3cm} intervallo \emph{chiuso}
+         \item (a,b$]$ \hspace{3cm} intervallo \emph{aperto in a, chiuso in b}
+         \item $[$a,b) \hspace{3cm} intervallo \emph{chiuso in a, aperto in b}
+     \end{itemize}
+ \textit{intervalli illimitati}
+     \begin{itemize} 
+         \item (-$\infty$,a) \hspace{3cm} $\left \{ x\in \mathbf{R}, \; x<a\right \}$
+         \item (-$\infty$,a$]$ \hspace{3cm} $\left \{ x\in \mathbf{R}, \; x\leq a\right \}$
+         \item (a,+$\infty$) \hspace{2.87cm} $\left \{ x\in \mathbf{R}, \; x>a\right \}$
+         \item $[$a,+$\infty$) \hspace{3cm} $\left \{ x\in \mathbf{R}, \; x\geq a\right \}$
+     \end{itemize}
+ 
+ \end{mydefinition}
+\vspace{1cm}
+ \begin{mydefinition}[Maggioranti/Minoranti]
+     Sia $A\subseteq \mathds{R}$, $A\neq \emptyset$ \newline Def: \begin{itemize}
+         \item Maggiorante: un elemento M $\in \mathds{R}$ si dice maggiorante di A se $$x \leq M \hspace{0.5 cm} \forall x \in A$$
+         \item Minorante: un elemento m $\in \mathds{R}$ si dice minorante di A se $$x \geq m \hspace{0.5 cm} \forall x \in A$$
+     \end{itemize}
+     \vspace{0.5cm}
+     Esistono insiemi privi di maggioranti e/o minoranti
+     \begin{itemize}
+         \item A si dice \emph{limitato superiormente} se ammette almeno un maggiorante
+         \item A si dice \emph{limitato inferiormente} se ammette almeno un minorante
+         \item A si dice \emph{limitato} se e' limitato sia superiormente che inferiormente
+     \end{itemize}
+     \newline
+     Es: \newline
+     A = $[$ 1, $\infty)$
+     \begin{itemize}
+         \item \textbf{A non ha maggioranti}; infatti se esistesse un maggiorante chiamato M $\in \mathds{R}$, allora dalla definizione di maggiorante deduciamo che $\forall x \in [1,+ \infty)$ si ha che x $\leq$M. Ma questo e' assurdo perche' per esempio M+1$\in[1,+\infty$), questo pero' non verifica x$\leq$M!
+         \item A ammmette minoranti, per esempio m=1 oppure ogni reale minore di 1
+     \end{itemize}
+     A quindi: \begin{itemize}
+         \item non e' superiormente limitato
+         \item e' inferiormente limitato
+         \item non e' limitato
+     \end{itemize}
+
+     \emph{NB} \begin{itemize}
+         \item M$\in \mathbf{R}$ e' maggiorante di A se x $\leq$ M $\forall x \in A$
+         \item Nella definizione di maggiorante/minorante di un insieme A \emph{NON e' richiesto} che il maggiorante/minorante \emph{appartenga} ad A
+     \end{itemize}
+ \end{mydefinition}
+
+ \begin{mydefinition}[Massimo/minimo]
+      Sia $A\subseteq \mathds{R}$, $A\neq \emptyset$ \newline Def: \begin{itemize}
+          \item Un elemento M $\in \mathbf{R}$ si dice massimo di A se: \begin{itemize}
+              \item M e' maggiorante di A
+              \item M $\in$ A
+          \end{itemize}
+           \item Un elemento m $\in \mathbf{R}$ si dice minimo di A se: \begin{itemize}
+              \item m e' minorante di A
+              \item m $\in$ A
+          \end{itemize}
+      \end{itemize}
+     \emph{NB}: \begin{itemize}
+         \item Se un insieme e' limitato \textbf{superiormente}/\textit{inferiormente}, il \textbf{massimo}/\textit{minimo} puo' non esistere
+         \item Massimo e minimo se esistono sono unici
+     \end{itemize}
+     Es: \newline
+     Dato $A \subseteq \mathbf{R}, \hs A\neq 0, $
+ \end{mydefinition}
+
+\end{document}
