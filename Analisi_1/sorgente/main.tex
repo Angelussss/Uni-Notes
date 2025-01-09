@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -29,13 +29,15 @@
 
 
 \title{Analisi I}
-\author{angeloperotti7 }
-\date{January 2025}
+\author{Angelo Perotti}
+
 
 \begin{document}
-
 \maketitle
 \newpage
+\tableofcontents
+\newpage
+
 \section{Introduction}
 
 \section{Nozioni Preliminari}
@@ -185,7 +187,426 @@ $$
          \item Massimo e minimo se esistono sono unici
      \end{itemize}
      Es: \newline
-     Dato $A \subseteq \mathbf{R}, \hs A\neq 0, $
+     Dato $A \subseteq \mathbf{R}, A\neq 0, A=(1,+\infty)$
+     \begin{itemize}
+         \item non ammette massimo (non ha maggiorante)
+         \item ammette minoranti
+         \item non ammette minimi, infatti l'insieme dei minoranti B=(- $\infty$, 1$]$ poiche' A$\cap$B=$\emptyset$ allora A non ammette minimo
+     \end{itemize}
  \end{mydefinition}
 
+ \begin{mydefinition}[Estremo superiore/inferiore]
+          Sia $A\subseteq \mathds{R}$, $A\neq \emptyset$ \newline Def: \begin{itemize}
+              \item un elemento $\overline{x} \in \mathbf{R}$ si dice \emph{estremo superiore} di A ($\overline{x}=supA)$ se $\overline{x}$ e' il \emph{piu' piccolo dei maggioranti} $$supA=min \left \{ M \in \mathbf{R}:M \hspace{1.5mm} maggiorante \hspace{1.5mm} di \hspace{1.5mm} A\right \}$$
+              
+              \item un elemento $\overline{x} \in \mathbf{R}$ si dice \emph{estremo inferiore} di A ($\overline{x}=infA)$ se $\overline{x}$ e' il \emph{piu' grande dei minoranti} $$infA=max \left \{ m \in \mathbf{R}:m \hspace{1.5mm} minorante \hspace{1.5mm} di \hspace{1.5mm} A\right \}$$
+          \end{itemize}
+          \emph{NB}: \begin{itemize}
+              \item se A non e' superiormente limitato => supA=$+\infty$
+              \item se A non e' inferiormente limitato => infA=$-\infty$
+              \item sia A$\subset \mathbf{R}$, A $\neq \emptyset$ e supponiamo che A ammetta massimo/minimo, allora questo e' unico
+              \item sia A$\subset \mathbf{R}$, A $\neq \emptyset$ e supponiamo che A ammetta \textbf{massimo M}/\textit{minimo m}, allora vale che \textbf{supA=M}/\textit{infA=m}
+          \end{itemize}
+ \end{mydefinition}
+ \begin{mydefinition}[Assioma di Completezza di $\mathds{R}$]
+     
+ \end{mydefinition}
+ \begin{mydefinition}[parte intera]
+     
+ \end{mydefinition}
+ \begin{mydefinition}[Proprieta' di Archimede]
+     L'insieme dei numeri naturali $\mathds{N}$ non e' superiormente limitato \hspace{2cm} $sup\mathds{N}=+\infty$
+     $$\forall x \in \mathds{R} \hspace{2.5mm} \exists n\in \mathds{N} \hspace{5mm} t.c. \hspace{5mm}n>x$$
+ \end{mydefinition}
+ \begin{mydefinition}[Densita' di $\mathds{Q}$ in $\mathds{R}$]
+     
+ \end{mydefinition}
+\subsection{Funzioni}
+\begin{mydefinition}[Funzione]
+    Siano A,B due insiemi non vuoti. Una funzione $f$ da A a B e' una corrispondenza che associa ad ogni elemento $x \in A$ uno ed un solo elemento $y \in B$
+    $$\forall\hspace{1mm} x \hspace{1mm}\in\hspace{1mm} A\hspace{1mm} \exists ! \hspace{1mm}y \hspace{1mm}\in\hspace{1mm} B : \hspace{1mm}y=f(x)$$
+    Notazione: $f:A\xrightarrow{}B$
+    \begin{itemize}
+        \item A Dominio di $f$
+        \item B Codominio di $f$
+        \item l'immagine di $f$ e' l'insieme dei valori della funzione
+    \end{itemize}
+\end{mydefinition}
+\begin{mydefinition}[funzione iniettiva]
+    
+\end{mydefinition}
+\begin{mydefinition}funzione suriettiva
+    
+\end{mydefinition}
+\begin{mydefinition}[funzione biiettiva]
+    
+\end{mydefinition}
+\begin{mydefinition}[composizione di due funzioni]
+    
+\end{mydefinition}
+\begin{mydefinition}[funzione inversa]
+    
+\end{mydefinition}
+\begin{mydefinition}[restrizione di una funzione]
+    
+\end{mydefinition}
+
+\subsection{funioni reali di variabili reali}
+\begin{mydefinition}[funzioni limitate]
+    \begin{itemize}
+        \item limitata superiormente
+        \item limitata inferiormente
+        \item limitata
+    \end{itemize}
+\end{mydefinition}
+\begin{mydefinition}[funzioni simmetriche]
+\begin{itemize}
+    \item $f$ e' \emph{pari}
+    \item $f$ e' \emph{dispari}
+    \item $f$ e' \emph{periodica}
+\end{itemize}
+    
+\end{mydefinition}
+\begin{mydefinition}[funzioni monotone]
+\begin{itemize}
+    \item \emph{monotone crescente}
+    \item \emph{monotone strettamente crescente}
+    \item \emph{monotone decrescente}
+    \item \emph{monotone strettamente decrescente}
+\end{itemize}
+    
+\end{mydefinition}
+\begin{mydefinition}[grafico della funzione inversa]
+    
+\end{mydefinition}
+\subsection{le funzioni elementari e i loro grafici}
+\begin{itemize}
+    \item funzioni il cui grafico e' una \emph{retta}
+    \begin{itemize}
+        \item funzioni costanti
+        \item funzioni lineari
+        \item funzioni affini
+    \end{itemize}
+\end{itemize}
+
+\begin{mydefinition}[valore assoluto]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[potenze e radici]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[funzioni esponenziali e logaritmiche]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[funzioni trigonometriche]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[funzioni trigonometriche inverse]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[funzioni iperboliche]
+    
+\end{mydefinition}
+
+\section{I Numeri Complessi}
+\begin{mydefinition}[forma cartesiana dei numeri complessi]
+    
+\end{mydefinition}
+\subsubsection{operazioni sui numeri complessi}
+\begin{itemize}
+    \item somma
+    \item Moltiplicazione
+    \item Prodotto
+\end{itemize}
+
+\begin{mydefinition}[modulo e coniugato di un numero complesso]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[reciproco di un numero complesso]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[risoluzione di equazioni in $\mathds{C}$]
+    
+\end{mydefinition}
+\subsubsection{forma trigonometrica}
+
+\begin{mydefinition}[coordinate polari]
+        
+\end{mydefinition}
+
+\begin{mydefinition}[prodotto dei numeri complessi in forma Trigonometrica]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[quozionte di numeri complessi in forma trigonometrica]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[formula di De Moivre]
+    
+\end{mydefinition}
+\subsubsection{forme esponenziali}
+
+
+\begin{mydefinition}[teorema fondamentale dell'algebra]
+    un'equazione di grado n $\leq$1 in $\mathds{C}$ $$a_nz^n+a_{n-1}z^{n-1}+...+a_2z^2+a_1z^1+a_0z^0=0$$
+    (dove $a_n \in \mathds{C, \hspace{0.5cm} a_n \neq 0}$) ha esattamente n soluzioni in $\mathds{C}$
+\end{mydefinition}
+
+\begin{mydefinition}[Radici]
+    
+\end{mydefinition}
+\section{Successioni Numeriche}
+\begin{mydefinition}[il fattoriale]
+    
+\end{mydefinition}
+\begin{mydefinition}[coefficiente Binomiale]
+    
+\end{mydefinition}
+\begin{mydefinition}[triangolo di tartaglia]
+    
+\end{mydefinition}
+\begin{mydefinition}[il binomio di Newton]
+    
+\end{mydefinition}
+\begin{mydefinition}[successioni geometriche]
+    
+\end{mydefinition}
+\subsection{operazioni di limite}
+
+\subsubsection{a$_n \xrightarrow{} 0$}
+\subsubsection{a$_n \xrightarrow{} +\infty$}
+\subsubsection{a$_n \xrightarrow{} -\infty$}
+\subsubsection{a$_n \xrightarrow{} l$}
+\subsection{limiti fondamentali}
+\begin{mydefinition}[Unicita' del limite]
+    
+\end{mydefinition}
+\begin{mydefinition}[limitezza delle successioni convergenti]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[sottosuccessioni e loro limiti, non esistenza del limite]
+    
+\end{mydefinition}
+\begin{mydefinition}[limiti sottosuccessioni]
+    
+\end{mydefinition}
+\begin{mydefinition}[esistenza del limite per successioni monotone: il numero di nepero]
+    
+\end{mydefinition}
+\subsubsection{il numero di nepero}
+\begin{mydefinition}[il numero di nepero]
+    
+\end{mydefinition}
+\begin{mydefinition}[limite nepero generalizzato]
+    
+\end{mydefinition}
+
+\begin{mydefinition}[teorema di permanenza del segno]
+    
+\end{mydefinition}
+\begin{mydefinition}[teorema dei due carabinieri]
+    
+\end{mydefinition}
+\subsubsection{algebra dei limiti}
+\begin{mydefinition}[algebra dei limiti]
+    
+\end{mydefinition}
+\begin{mydefinition}[forme indeterminate e algebra estesa]
+    
+\end{mydefinition}
+\begin{mydefinition}[tecniche calcolo dei limiti]
+\begin{itemize}
+a seguito una lista delle piu' basilari tecniche di risoluzione dei limiti
+    \item somma e sottrai
+    \item raccogli chi comanda
+    \item moltiplica e dividi
+    \item moltiplica, dividi e razionalizza
+\end{itemize}
+
+\end{mydefinition}
+
+\begin{mydefinition}[Criterio del rapporto]
+    
+\end{mydefinition}
+\begin{mydefinition}[gerarchia degli infiniti]
+per ogni $\alpha > 0$  e  $a>1$, le seguenti successioni rappresentano degli \emph{infiniti}, ovvero tendono a $+ \infty$ per n->$+\infty$
+    $$log_an\hspace{7mm}n^\alpha\hspace{7mm}a^n\hspace{7mm}n!\hspace{7mm}n^n$$
+    in ordine crescente:
+    %this is a placeholder
+\end{mydefinition}
+\subsection{Limiti di funzioni}
+\subsubsection{Intorno}
+\subsubsection{Punto di Accumulazione}
+\subsubsection{Limite finito di un punto}
+\subsubsection{funzioni continue}
+\subsubsection{limiti destro e sinistro}
+\subsubsection{continuita' da destra e da sinistra}
+\subsubsection{il legame con limiti di successioni}
+\subsubsection{criterio per la non esistenza di un limite}
+\subsubsection{teorema di unicita' del limite}
+\subsubsection{teorema di permanenza del segno}
+\subsubsection{teorema di confronto}
+\subsubsection{algebra dei limiti e forme indeterminate}
+\subsubsection{limite di funzioni monotone}
+\subsubsection{limiti funzioni elementari}
+\subsubsection{i limiti notevoli}
+\begin{mydefinition}[limite notevole di nepero]
+    
+\end{mydefinition}
+\subsubsection{Continuita' e discontinuita'}
+tipi di continuita'
+\begin{itemize}
+    \item discontinuita' eliminabile
+    \item discontinuita' a salto
+    \item discontinuita' essenziale
+\end{itemize}
+\subsubsection{algebra delle funzioni continue}
+\subsubsection{continuita' della composizione}
+\subsubsection{proprieta' delle funzioni continue}
+\begin{mydefinition}[teorema degli zeri]
+    
+\end{mydefinition}
+\begin{mydefinition}[teorema dei valori intermedi]
+    
+\end{mydefinition}
+\subsubsection{massimi e minimi assoluti}
+
+\subsubsection{teorema di Weierstrass}
+
+\subsubsection{il simpbolo di o piccolo}
+
+\section{il calcolo differenziale}
+\begin{mydefinition}[la derivata]
+    
+\end{mydefinition}
+\begin{mydefinition}[significato geometrico]
+    
+\end{mydefinition}
+\begin{mydefinition}[derivabilita' implica continuita']
+    ma non tutte le funzioni continue sono derivabili
+\end{mydefinition}
+\subsection{derivata di funzioni elementari}
+\subsection{Regole di derivazione }
+\subsubsection{teorema di linearita'}
+\subsubsection{teorema-regola di Liebnitz}
+\subsubsection{teorema regola della catena}
+\subsubsection{teorema derivazione della funzione inversa}
+\subsubsection{corollario derivazione del quozionte}
+\subsubsection{massimi e minimi relativi}
+\subsubsection{teorema di Fermat}
+\begin{mydefinition}[punti critici]
+    
+\end{mydefinition}
+\subsubsection{teorema di Rolle}
+\subsubsection{teorema di Lagrange}
+\subsubsection{caratterizzazione delle funzioni monotone su intervalli}
+\subsubsection{caratterizzazione delle funzioni costanti su intervalli}
+\subsection{calcolo differenziale pt2}
+\subsubsection{teorema di cauchy}
+\subsubsection{teorema di De l'Hopital}
+\subsubsection{criterio di derivabilita'}
+\subsubsection{derivate successive}
+\subsubsection{insiemi convessi e funzioni convesse}
+\begin{mydefinition}[funzione convessa]
+    
+\end{mydefinition}
+\begin{mydefinition}[convessita' e derivata prima]
+    
+\end{mydefinition}
+\begin{mydefinition}[convessita' e derivata seconda]
+    
+\end{mydefinition}
+\begin{mydefinition}[punti di flesso]
+    
+\end{mydefinition}
+\subsubsection{Formula di Taylor}
+\begin{mydefinition}[polinomio di Taylor]
+    \begin{itemize}
+        \item formula di taylor con il resto di peano
+        \item formula di taylor con il resto di lagrange
+    \end{itemize}
+\end{mydefinition}
+
+\section{integrali}
+\begin{mydefinition}[integrale di Riemann]
+    somme inferiori e superiori
+\end{mydefinition}
+\subsubsection{significato geometrico}
+\subsubsection{criteri di integrabilita'}
+\subsection{proprieta' degll'integrale}
+\begin{itemize}
+    \item Linearita'
+    \item Additivita' rispetto al dominio
+    \item positivita'
+    \item monotonia
+    \item $|\int_a^bf(x)dx|\leq \int_a^bf(x)dx$
+\end{itemize}
+\emph{N.B.}\begin{itemize}
+    \item $\int_a^af(x)dx=0$
+    \item se a<b $\int^a_bf(x)dx:=-\int^b_af(x)dx$
+\end{itemize}
+\begin{mydefinition}[il teorema della Media]
+    
+\end{mydefinition}
+\subsection{la funzione integrale}
+\subsubsection{il teorema del calcolo integrale}
+\subsubsection{Primitiva}
+\subsection{integrali indefiniti}
+\subsection{formula fondamentale del calcolo integrale}
+\subsubsection{calcolo degli integrali: integrazione per sostituzione}
+\subsubsection{simmetrie negli integrali}
+\subsubsection{calcolo degli integrali: integrazione per parti}
+\subsubsection{calcolo degli integrali: integrazione delle funzioni razionali}
+\begin{itemize}
+    \item n>m
+    \item n $\geq$ m
+    \item  m=2
+\end{itemize}
+\section{serie numeriche e integrali generalizzati}
+\subsection{serie numeriche}
+\subsection{serie telescopiche}
+\subsection{condizioni necessarie per la convergenza di una serie}
+\subsection{alcune osservazioni sul carattere di una serie}
+\subsection{serie a termini positivi}
+\subsection{criterio del confronto}
+\subsection{criterio del confronto asintotico}
+\subsection{serie armonica generalizzata}
+\subsection{criterio del rapporto e della radice n-esima}
+\subsection{criterio di convergenza assoluta}
+\subsection{criterio di leibnitz}
+\subsection{integrali generalizzati}
+\begin{itemize}
+    \item integrale generalizzato in intervallo limitato
+    \item integrale generalizzato in intervallo illimitato
+\end{itemize}
+\subsection{criterio del confronto}
+\begin{itemize}
+    \item criterio del confronto
+    \item criterio del confronto asintotico
+\end{itemize}
+\subsection{criterio di convergenza assoluta}
+\subsection{serie a integrali generalizzati}
+\subsection{criterio integrale}
+\section{Equazioni Differenziali Ordinarie}
+\subsection{problema di cauchy}
+\subsection{esistenza e unicita' locale di soluzioni}
+\subsection{equazioni a variabili separabili}
+\subsection{equazioni lineari del primo ordine}
+\subsection{equazioni lineari del secondo ordine}
+\section{Mega Riassunto Pazzo Della Morte Finale}
+\subsection{Il calcolo differenziale}
+\subsection{Integrali}
+\subsection{Serie numeriche}
+\subsection{integrale generalizzato}
+\subsection{equazioni differenziali ordinarie}
 \end{document}
+
