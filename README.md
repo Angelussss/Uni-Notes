@@ -34,7 +34,11 @@ This repository contains notes, exercises, and projects organized by academic ye
 ---
 
 ### 3° Anno
-*(to be added)*
+- PPSE
+- High Freq
+- embedded
+- SoC
+- Optoelectronics
 
 
 # NB! These notes are not intended for studying, but rather provide a convenient, well-written summary of the material.
